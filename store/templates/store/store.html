@@ -1,120 +1,22 @@
-{% extends 'store/main.html'%}
+{% extends 'store/main.html' %}
 {% load static %}
-{% block content%}
-<div class="row">
-<div class="col-lg-4">
-    <img  class="thumbnail" src="{% static 'images/spinach.jpg' %}">
-        <div class="box-element product">
-            <h6><strong>Spinuch</strong></h6>
-            <hr>
-            <button class="btn btn-outline-secondary add-btn">add to cart</button>
-            <a class="btn btn-outline-success"href="#">View</a>
-            <h4 style="display: inline-block;float:right">1kg @ ksh250</h4>
-         </div>
-</div>
+{% block content %}
+	<div class="row">
+		{% for product in products %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
 
-<div class="col-lg-4">
-    <img  class="thumbnail" src="{% static 'images/apple.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Apple</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                <a class="btn btn-outline-success"href="#">View</a>
-                <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-        </div>
+				<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+				
+				<a class="btn btn-outline-success" href="#">View</a>
+				<h4 style="display: inline-block;float: left; "><strong>Ksh{{product.price|floatformat}}</strong></h4>
 
-</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
 
-<div class="col-lg-4">
-    <img  class="thumbnail"src="{% static 'images/capsicum.jpg' %}">
-    <div class="box-element product">
-        <h6><strong>Cupsicum</strong></h6>
-        <hr>
-        <button class="btn btn-outline-secondary add-btn">add to cart</button>
-        <a class="btn btn-outline-success"href="#">View</a>
-        <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-    </div>
-
-</div>
-
-</div>
-<div class="row">
-    <div class="col-lg-4">
-        <img  class="thumbnail" src="{% static 'images/kales.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Kales</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                <a class="btn btn-outline-success"href="#">View</a>
-                <h4 style="display: inline-block;float:right">1kg @ ksh250</h4>
-             </div>
-    </div>
-    
-    <div class="col-lg-4">
-        <img  class="thumbnail" src="{% static 'images/cabbage.jpg' %}">
-                <div class="box-element product">
-                    <h6><strong>Cabbage</strong></h6>
-                    <hr>
-                    <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                    <a class="btn btn-outline-success"href="#">View</a>
-                    <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-            </div>
-    
-    </div>
-    
-    <div class="col-lg-4">
-        <img  class="thumbnail"src="{% static 'images/mellon.jpg' %}">
-        <div class="box-element product">
-            <h6><strong>Water mellon</strong></h6>
-            <hr>
-            <button class="btn btn-outline-secondary add-btn">add to cart</button>
-            <a class="btn btn-outline-success"href="#">View</a>
-            <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-        </div>
-    
-    </div>
-    
-    </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <img  class="thumbnail" src="{% static 'images/ngwashe.jpg' %}">
-                <div class="box-element product">
-                    <h6><strong>Sweet potato</strong></h6>
-                    <hr>
-                    <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                    <a class="btn btn-outline-success"href="#">View</a>
-                    <h4 style="display: inline-block;float:right">1kg @ ksh250</h4>
-                 </div>
-        </div>
-        
-        <div class="col-lg-4">
-            <img  class="thumbnail" src="{% static 'images/nyanya2.jpg' %}">
-                    <div class="box-element product">
-                        <h6><strong>Tomatoe</strong></h6>
-                        <hr>
-                        <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                        <a class="btn btn-outline-success"href="#">View</a>
-                        <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-                </div>
-        
-        </div>
-        
-        <div class="col-lg-4">
-            <img  class="thumbnail"src="{% static 'images/onion.jpg' %}">
-            <div class="box-element product">
-                <h6><strong>Onion</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">add to cart</button>
-                <a class="btn btn-outline-success"href="#">View</a>
-                <h4 style="display: inline-block;float: right">1kg @ ksh250</h4>
-            </div>
-        
-        </div>
-        
-        </div>
-        
-        
-    
-    
- {%endblock content%}
- 
+{% endblock content %}
