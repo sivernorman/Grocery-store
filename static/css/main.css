@@ -4,8 +4,7 @@
 
 body{
 	/* background-color: hsl(0, 0%, 98%); */
-	background-image: image('https://images.unsplash.com/photo-1506617564039-2f3b650b7010?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGdyb2Nlcnl8ZW58MHx8MHx8&a') ;
-}
+ }
 
 h1,h2,h3,h4,h5,h6{
 	color:hsl(0, 0%, 30%);
@@ -31,7 +30,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .bg-dark{
-	background-color: #4f868c!important;
+	background-color: rgb(19, 15, 15)!important;
 }
 
 #cart-icon{
@@ -101,4 +100,9 @@ h1,h2,h3,h4,h5,h6{
 
 .hidden{
 	display: none!important;
+}
+
+
+.backgroung{
+	background-image: url('../images/arrow-down.png');
 }
