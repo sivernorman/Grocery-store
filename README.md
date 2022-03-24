@@ -8,7 +8,6 @@ This is an application that allows you to be in the loop about everything happen
 # User Stories
 Sign in with the application to start using.
 Set up a profile about me and a general location and my neighborhood name.
-Find a list of different businesses in my neighborhood. 4.Find Contact Information for the health department and Police authorities near my neighborhood.
 Create Posts that will be visible to everyone in my neighborhood.
 Only view details of a single neighborhood.
 
